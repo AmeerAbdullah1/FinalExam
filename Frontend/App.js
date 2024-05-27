@@ -1,20 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import HomeScreen from './HomeScreen';
+import MyPlans   from './MyPlans';
+import MyCalendar from './MyCalender';
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <View style = {styles.container}>
+         <HomeScreen/>  
+        {/* <MyCalendar/>   */}
+       {/* <MyPlans/>  */}
       <StatusBar style="auto" />
     </View>
   );
 }
-
+;
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex: 1, // This makes the container take up the full screen
+    justifyContent: 'center', // Centers content vertically
+    alignItems: 'center', // Centers content horizontally
+    backgroundColor: 'white', // Light grey background color
   },
 });
